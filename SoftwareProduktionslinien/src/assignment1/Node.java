@@ -1,14 +1,14 @@
 package assignment1;
 
 public class Node<T> {
-	private T content;
+	private T label;
 
-	public T getContent() {
-		return content;
+	public T getLabel() {
+		return label;
 	}
 
-	public Node(T content) {
-		this.content = content;
+	public Node(T label) {
+		this.label = label;
 	}
 	
 }
