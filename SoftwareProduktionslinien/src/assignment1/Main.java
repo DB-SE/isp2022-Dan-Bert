@@ -1,5 +1,7 @@
 package assignment1;
 
+import java.util.LinkedList;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -38,6 +40,10 @@ public class Main {
 		
 		System.out.println("Weighted Graph: " + weiGraph.getConnections());
 		
+		
+		System.out.println(weiGraph.DepthSearch(nodeA, "C", new LinkedList<>()));
+		System.out.println(labGraph.DepthSearch(nodeC, "A", new LinkedList<>()));
+		System.out.println(labGraph.DepthSearch(nodeD, "E", new LinkedList<>()));
 		
 
 	}

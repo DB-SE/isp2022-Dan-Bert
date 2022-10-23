@@ -2,6 +2,7 @@ package assignment1;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 public class Graph {
 	
@@ -37,6 +38,27 @@ public class Graph {
 		if(!nodes.contains(endNode)) {
 			nodes.add(endNode);
 		}
+		
+	}
+	
+	public<T> Node<?> DepthSearch(Node<?> startNode, T targetValue, LinkedList<Node<?>> alreadyVisited ) {
+		if(startNode.getLabel() == targetValue)
+			return startNode;
+		alreadyVisited.add(startNode);
+		
+		for(Connection c : connections) {
+			if(c.getStartNode() != startNode) {
+				continue;
+			}
+			
+			if(!alreadyVisited.contains(c.getEndNode())) {
+				Node <?> res = DepthSearch(c.getEndNode(), targetValue, alreadyVisited);
+				if(res != null)
+					return res;
+			}
+		}
+		
+		return null;
 		
 	}
 	
