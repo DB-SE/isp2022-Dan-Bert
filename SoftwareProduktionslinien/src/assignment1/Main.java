@@ -15,7 +15,7 @@ public class Main {
 		Graph labGraph = new Graph();
 		
 		Node<String> nodeA = new Node<String>("A");
-		Node<String> nodeB = new Node<String>("B");
+		Node<Integer> nodeB = new Node<Integer>(1);
 		Node<String> nodeC = new Node<String>("C");
 		Node<String> nodeD = new Node<String>("D");
 		
@@ -41,10 +41,10 @@ public class Main {
 		System.out.println("Weighted Graph: " + weiGraph.getConnections());
 		
 		
-		System.out.println(weiGraph.DepthSearch(nodeA, "C", new LinkedList<>()));
+		System.out.println(weiGraph.DepthSearch(nodeB, "C", new LinkedList<>()));
 		System.out.println(labGraph.DepthSearch(nodeC, "A", new LinkedList<>()));
-		System.out.println(labGraph.DepthSearch(nodeD, "E", new LinkedList<>()));
-		
+		System.out.println(labGraph.DepthSearch(nodeD, "1", new LinkedList<>()));
+		System.out.println(labGraph.DepthSearch(nodeD, 1, new LinkedList<>()));
 
 	}
 

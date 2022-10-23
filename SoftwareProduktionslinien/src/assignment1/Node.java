@@ -13,7 +13,7 @@ public class Node<T> {
 	
 	
 	public String toString() {
-		return (String) label;
+		return String.valueOf(label);
 	}
 	
 }
