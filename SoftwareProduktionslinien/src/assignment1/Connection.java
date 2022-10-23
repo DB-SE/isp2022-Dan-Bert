@@ -1,28 +1,17 @@
 package assignment1;
 
-public class Connection<T,C extends Number> {
-	private C cost;
-	private Node<T> target;
-
-	public C getCost() {
-		return cost;
+public class Connection {
+	private Node<?> startNode;
+	private Node<?> endNode;
+	
+	public Node<?> getStartNode() {
+		return startNode;
 	}
-
-	public void setCost(C cost) {
-		this.cost = cost;
+	public Node<?> getEndNode() {
+		return endNode;
 	}
-
-	public Node<T> getTarget() {
-		return target;
+	public Connection(Node<?> startNode, Node<?> endNode) {
+		this.startNode = startNode;
+		this.endNode = endNode;
 	}
-
-	public void setTarget(Node<T> target) {
-		this.target = target;
-	}
-
-	public Connection(C cost, Node<T> target) {
-		this.cost = cost;
-		this.target = target;
-	}
-
 }
