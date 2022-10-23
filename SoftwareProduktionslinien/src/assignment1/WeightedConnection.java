@@ -1,14 +1,14 @@
 package assignment1;
 
-public class WeightedConnection<T extends Number> extends Connection{
+public class WeightedConnection extends Connection{
 
-	private T cost;
+	private double cost;
 	
-	public T getCost() {
+	public double getCost() {
 		return cost;
 	}
 
-	public WeightedConnection(Node<?> startNode, Node<?> endNode, T cost) {
+	public WeightedConnection(Node<?> startNode, Node<?> endNode, double cost) {
 		super(startNode, endNode);
 		this.cost = cost;
 	}

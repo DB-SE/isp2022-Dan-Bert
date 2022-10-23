@@ -15,10 +15,10 @@ public class Main {
 		Graph labGraph = new Graph();
 		
 		Node<String> nodeA = new Node<String>("A");
-		Node<Integer> nodeB = new Node<Integer>(1);
+		Node<String> nodeB = new Node<String>("B");
 		Node<String> nodeC = new Node<String>("C");
 		Node<String> nodeD = new Node<String>("D");
-		
+		Node<String> nodeE = new Node<String>("E");
 		
 		
 		labGraph.AddEntry(new LabeledFactory(nodeA, nodeB));
@@ -32,19 +32,22 @@ public class Main {
 		Graph weiGraph = new Graph();
 		
 		
-		weiGraph.AddEntry(new WeightedFactory<Integer>(nodeA, nodeB, 5));
-		weiGraph.AddEntry(new WeightedFactory<Integer>(nodeA, nodeC, 2));
-		weiGraph.AddEntry(new WeightedFactory<Integer>(nodeB, nodeC, 3));
-		weiGraph.AddEntry(new WeightedFactory<Integer>(nodeC, nodeD, 3));
-		weiGraph.AddEntry(new WeightedFactory<Integer>(nodeD, nodeA, 1));
+		weiGraph.AddEntry(new WeightedFactory(nodeA, nodeB, 8));
+		weiGraph.AddEntry(new WeightedFactory(nodeA, nodeC, 2));
+		weiGraph.AddEntry(new WeightedFactory(nodeB, nodeC, 1));
+		weiGraph.AddEntry(new WeightedFactory(nodeC, nodeB, 1));
+		weiGraph.AddEntry(new WeightedFactory(nodeC, nodeD, 3));
+		weiGraph.AddEntry(new WeightedFactory(nodeD, nodeB, 1));
+		weiGraph.AddEntry(new WeightedFactory(nodeD, nodeE, 1));
 		
 		System.out.println("Weighted Graph: " + weiGraph.getConnections());
 		
 		
-		System.out.println(weiGraph.DepthSearch(nodeB, "C", new LinkedList<>()));
-		System.out.println(labGraph.DepthSearch(nodeC, "A", new LinkedList<>()));
-		System.out.println(labGraph.DepthSearch(nodeD, "1", new LinkedList<>()));
-		System.out.println(labGraph.DepthSearch(nodeD, 1, new LinkedList<>()));
+		System.out.println("Search value C in: " + weiGraph.DepthSearch(nodeB, "C", new LinkedList<>()));
+		System.out.println("Search value A in: " + labGraph.DepthSearch(nodeC, "A", new LinkedList<>()));
+		System.out.println("Search value 1 in: " +labGraph.DepthSearch(nodeD, "1", new LinkedList<>()));
+		
+		System.out.println(GraphTools.BellmanFord(weiGraph, nodeA));
 
 	}
 
