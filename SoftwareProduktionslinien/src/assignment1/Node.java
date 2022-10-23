@@ -11,4 +11,9 @@ public class Node<T> {
 		this.label = label;
 	}
 	
+	
+	public String toString() {
+		return (String) label;
+	}
+	
 }

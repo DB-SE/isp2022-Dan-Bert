@@ -12,5 +12,9 @@ public class WeightedConnection<T extends Number> extends Connection{
 		super(startNode, endNode);
 		this.cost = cost;
 	}
+	
+	public String toString() {
+		return super.toString() + ": " + cost;
+	}
 
 }

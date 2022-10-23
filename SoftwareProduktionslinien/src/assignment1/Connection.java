@@ -14,4 +14,9 @@ public class Connection {
 		this.startNode = startNode;
 		this.endNode = endNode;
 	}
+	
+	
+	public String toString() {
+		return startNode.toString() + "-" + endNode.toString();
+	}
 }
