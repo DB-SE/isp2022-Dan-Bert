@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/Coloured.jar"/>
+	<classpathentry kind="lib" path="lib/Edge.jar"/>
+	<classpathentry kind="lib" path="lib/MST.jar"/>
+	<classpathentry kind="lib" path="lib/Node.jar"/>
+	<classpathentry kind="lib" path="lib/Undirected.jar"/>
+	<classpathentry kind="lib" path="lib/Weighted.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

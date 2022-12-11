@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="lib" path="/usr/lib/jvm/java-17-openjdk-17.0.5.0.8-2.fc36.x86_64/lib/jrt-fs.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="/GraphFramework"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

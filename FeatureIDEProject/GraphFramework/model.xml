@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showconstraints" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="GraphConfig">
+			<graphics key="collapsed" value="false"/>
+			<and mandatory="true" name="Edge">
+				<alt abstract="true" mandatory="true" name="Type">
+					<feature name="Undirected"/>
+					<feature name="Directed"/>
+				</alt>
+				<feature name="Weighted"/>
+			</and>
+			<and mandatory="true" name="Node">
+				<feature name="Coloured"/>
+				<feature name="Labeled"/>
+			</and>
+			<and abstract="true" mandatory="true" name="Algorithm">
+				<graphics key="collapsed" value="false"/>
+				<feature name="DFS"/>
+				<feature name="MST"/>
+				<feature name="Adjacency"/>
+				<feature name="BFS"/>
+			</and>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>MST</var>
+				<conj>
+					<var>Undirected</var>
+					<var>Weighted</var>
+				</conj>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>
