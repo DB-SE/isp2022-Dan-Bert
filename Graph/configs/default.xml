@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="GraphConfig"/>
+	<feature automatic="selected" name="Edge"/>
+	<feature automatic="selected" name="Type"/>
+	<feature automatic="unselected" name="Undirected"/>
+	<feature manual="selected" name="Directed"/>
+	<feature name="Weighted"/>
+	<feature automatic="selected" name="Node"/>
+	<feature manual="selected" name="Coloured"/>
+	<feature manual="selected" name="Labeled"/>
+	<feature automatic="selected" name="Algorithm"/>
+	<feature automatic="selected" name="DFS"/>
+	<feature automatic="unselected" name="MST"/>
+	<feature automatic="selected" name="Adjacency"/>
+	<feature name="SuperClasses"/>
+</configuration>
